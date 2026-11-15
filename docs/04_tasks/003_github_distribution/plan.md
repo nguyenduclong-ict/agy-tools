@@ -9,11 +9,12 @@
 ## 2. Danh Sách Tệp Thay Đổi / Tạo Mới
 
 - `.gitignore` (gỡ `dist/` để track `dist/index.js`)
-- `README.md` (hướng dẫn cài đặt GitHub, sử dụng lệnh, và quy trình `npm run build` trước khi commit)
+- `package.json` (đổi script `build` -> `bundle` để `npm i -g <git-url>` không kích hoạt `pacote` `#prepareDir` làm tạo Junction thiếu `dist/`)
+- `README.md` (hướng dẫn cài đặt GitHub, sử dụng lệnh, và quy trình `npm run bundle` trước khi commit)
 
 ## 3. Checklist Công Việc
 
-- [x] Bỏ `dist/` khỏi `.gitignore` và kiểm tra `package.json` (`bin`, `files`).
-- [x] Biên dịch `dist/index.js` bằng `npm run build` kèm shebang `#!/usr/bin/env node`.
+- [x] Bỏ `dist/` khỏi `.gitignore` và kiểm tra `package.json` (`bin`, `files`, `scripts`).
+- [x] Biên dịch `dist/index.js` bằng `npm run bundle` kèm shebang `#!/usr/bin/env node`.
 - [x] Viết `README.md` hướng dẫn cài đặt qua `github:<owner>/agy-tools` và sử dụng CLI.
 - [x] Xác minh đóng gói bằng `npm pack --dry-run` (chỉ gồm `dist/index.js` và `package.json`).

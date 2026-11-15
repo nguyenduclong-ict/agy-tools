@@ -8,10 +8,12 @@ CLI toolkit for:
 
 ```bash
 # Install globally directly from GitHub
-npm install -g github:<owner>/agy-tools
+npm install -g https://github.com/nguyenduclong-ict/agy-tools
+# Or shorthand:
+npm install -g github:nguyenduclong-ict/agy-tools
 
 # Or run directly without global install
-npx github:<owner>/agy-tools --help
+npx github:nguyenduclong-ict/agy-tools --help
 ```
 
 ## Usage
@@ -60,5 +62,5 @@ agy-tools sync --from claude --to agy --mode global --categories all --force
 npm install
 npm test
 npm run typecheck
-npm run build   # Always run before committing so dist/index.js stays updated
+npm run bundle  # Always run before committing so dist/index.js stays updated (avoid naming it "build" so npm Git installs skip rebuilding and unpack pre-built dist/)
 ```

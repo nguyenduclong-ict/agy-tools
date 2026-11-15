@@ -11,4 +11,4 @@ Chọn **TypeScript trên nền tảng Node.js (>= 20, ESM)** làm ngôn ngữ t
 
 ## Hệ quả
 - **Tích cực:** Hệ sinh thái phong phú cho CLI (`commander`, `@inquirer/prompts`), xử lý JSON/YAML/Diff nhanh gọn, cài đặt trực tiếp từ GitHub không cần `devDependencies`.
-- **Tiêu cực / Đánh đổi:** Trên Windows cần spawn tiến trình PowerShell khi đọc/ghi Credential Manager; yêu cầu máy đích cài sẵn Node.js >= 20; mỗi lần cập nhật `src/` cần chạy `npm run build` trước khi commit `dist/index.js`.
+- **Tiêu cực / Đánh đổi:** Trên Windows cần spawn tiến trình PowerShell khi đọc/ghi Credential Manager; yêu cầu máy đích cài sẵn Node.js >= 20; mỗi lần cập nhật `src/` cần chạy `npm run bundle` trước khi commit `dist/index.js` (không đặt tên script là `build`/`prepare` để tránh `pacote` kích hoạt `#prepareDir` gây lỗi Junction thiếu `dist/` khi chạy `npm i -g <git-url>` trên npm v11 Windows).

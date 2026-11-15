@@ -13,7 +13,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "build": "tsup",
+    "bundle": "tsup",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "dev": "tsx src/cli/index.ts"
