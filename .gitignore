@@ -1,0 +1,5 @@
+node_modules/
+*.bak
+*.bak.*
+agy-auth-backup.json
+.env
